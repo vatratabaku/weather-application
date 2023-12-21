@@ -1,13 +1,16 @@
-export default function WeatherCard(props) {
+import styles from "../components/Weather.module.css";
 
+
+export default function WeatherCard(props) {
+//#576EA5
 
   return (
-    <div>
-      <div style={{ marginTop: "30px" }}>
+    <div className="weatherCard">
+      <div style={{ marginTop: "50px" }}>
         <h4 style={{ marginTop: "-70px", marginBottom: "70px" }}>
           Current Weather
         </h4>
-        <h3 style={{ color: "#576EA5", marginTop: '-25px' }}>{props.name.toUpperCase()}</h3>
+        <h3 style={{ color: "#0056b3", marginTop: '-25px' }}>{props.name.toUpperCase()}</h3>
         <div style={{width:'180px', display:'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '-15px'}}>
           {props.temp >= 20 ? (
             <img

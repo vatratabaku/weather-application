@@ -1,7 +1,6 @@
-import "./App.css";
 import { useState, useEffect, useRef } from "react";
 import WeatherCard from "./components/WeatherCards";
-
+import "./components/style.css"
 
 
 function App() {
@@ -46,10 +45,12 @@ function App() {
 
    
       <img style={{position:'relative', width: '100%',   height: '100vh', opacity: '0.5'}} src='https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img>
-      <h1 style={{position:'absolute', top: '10px', color: '#4B6FA6', padding:'10px' }}>React Weather App ☀️</h1>
-     <div style={{width: '700px', height:'600px', position:'absolute', top: '120px', zIndex: '1', right: '30%', }}>
-     <input placeholder="Search for a city..." ref={inputRef} ></input>
+      <h1 style={{position:'absolute', top: '10px', color: '#0056b3', padding:'10px' }}>React Weather App ☀️</h1>
+     <div style={{width: '700px', height:'600px', position:'absolute', top: '120px', zIndex: '1', right: '30%'}}>
+      <div style={{width: "100%", display: "flex"}}>
+      <input placeholder="Search for a city..." ref={inputRef} ></input>
       <button onClick={handleButtonClick}>Search</button>
+      </div>
 
       {loading ? (
         <h1>Loading...</h1>
